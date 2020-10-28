@@ -1,7 +1,7 @@
 <%@ page isELIgnored="false" %>
-<body style="background:#f3f3f3">
+<body style="background:#353535">
 
- <h1 style="color:red;text-align:center">
+ <h1 style="color: #5ff0ff;text-align:center">
  <marquee width="100%" direction="right" height="100px" scrollamount="10">
  Welcome to  spring MVC </marquee> 
  </h1>
