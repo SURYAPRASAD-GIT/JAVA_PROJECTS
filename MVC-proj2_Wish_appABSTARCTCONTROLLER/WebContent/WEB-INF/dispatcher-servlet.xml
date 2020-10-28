@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- handler mapping -->
+<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+<property name="mappings">
+<props>
+<prop key="welcome.htm">shc</prop>
+<prop key="wish.htm">wmc</prop>
+</props>
+</property>
+</bean>
+
+<!-- controller classes -->
+<bean id="shc" class="com.surya.controller.ShowHomeController" />
+<bean id="wmc" class="com.surya.controller.Wish_msg_controller" >
+<constructor-arg ref="wishService" />
+</bean>
+
+<!-- service class cfg -->
+<bean id="wishService" class="com.surya.service.WishMsgServiceImp" />
+
+
+<!-- View resolver -->
+
+<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+<property name="prefix" value="/WEB-INF/pages/" />
+<property name="suffix" value=".jsp"/>
+</bean>
+
+</beans>
