@@ -5,6 +5,18 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
-  title = 'ng-user-management-system';
+  title = 'USER_MANAGEMENT_SYSTEM';
+  
+public today!: number;
+constructor() { 
+ 
+  setInterval(() => {
+    this.today = Date.now();
+  }, 1);
+}
+
+
+
 }
